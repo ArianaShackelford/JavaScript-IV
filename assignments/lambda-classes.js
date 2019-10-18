@@ -23,6 +23,26 @@ class Instructor extends Person{
     grade(student, subject){
         return `${student.name} recieves a perfect score on ${subject}.`
     }
+    changeGrade(student){
+        let score = function(min,max){
+            min = Math.ceil(min);
+            max = Math.ceil(max);
+            return Math.floor(Math.random() * (max - min)) + min;
+        };
+        let newGrade= student.gradeNum(1,100) + score(-20,20);
+
+        if (newGrade > student.gradeNum(1,100)){
+            return (`Student did fantastic, Instructor is adding points to class grade!  ${newGrade + student.gradeNum(1,100)} Total Points.`)
+        }else if (newGrade < student.gradeNum(1, 100)){
+            return (`Work was not satisfactory points being removed from class grade. ${newGrade + student.gradeNum(1,100)} Total Points.`)
+        } else{
+           return  (`Existing grade is sufficient. ${student.gradeNum(1, 100)} Points`);
+             
+        }
+
+        // Math.random(student.gradeNum(1,100))
+        
+    }
 }
 
 class Student extends Person{
@@ -31,6 +51,11 @@ class Student extends Person{
         this.previousBackground = attr.previousBackground;
         this.className = attr.className;
         this.favSubjects = attr.favSubjects;
+        this.gradeNum = function grade(min, max){
+            min = Math.ceil(min);
+            max = Math.floor(max);
+            return Math.floor(Math.random() * (max - min)) + min;
+        }
     }
     listSubjects(){
         return this.favSubjects.forEach(function(element){
@@ -146,15 +171,16 @@ const albert = new ProjectManager ({
 
 //Calling
 
-console.log(`Harold's background:`,harold.previousBackground);
-console.log(`Marg's catchphrase:`,marg.catchPhrase);
-console.log(`George is grading Joey: `,george.grade(joey, 'CSS'));
-console.log(`Lola's list of favorite Subjects:`)
-lola.listSubjects();
-console.log(`Albert announces stand up:`,albert.standUp('web25_george'));
-console.log(`Jen debugs Harold's code:`,jen.debugsCode(harold, 'JavaScript Fundamentals'));
-console.log(`George's catchphrase:`,george.catchPhrase);
-console.log(`Olivia's catchphrase:`,olivia.catchPhrase);
-console.log(`Lola's PR Assignment:`, lola.PRAssignment('Preprocessing-I'));
-console.log(`Joey's sprint challenge:`, joey.sprintChallenge('Advanced CSS'));
-console.log(`Olivia does a demo:`, olivia.demo('Array Methods'));
+// console.log(`Harold's background:`,harold.previousBackground);
+// console.log(`Marg's catchphrase:`,marg.catchPhrase);
+// console.log(`George is grading Joey: `,george.grade(joey, 'CSS'));
+// console.log(`Lola's list of favorite Subjects:`)
+// lola.listSubjects();
+// console.log(`Albert announces stand up:`,albert.standUp('web25_george'));
+// console.log(`Jen debugs Harold's code:`,jen.debugsCode(harold, 'JavaScript Fundamentals'));
+// console.log(`George's catchphrase:`,george.catchPhrase);
+// console.log(`Olivia's catchphrase:`,olivia.catchPhrase);
+// console.log(`Lola's PR Assignment:`, lola.PRAssignment('Preprocessing-I'));
+// console.log(`Joey's sprint challenge:`, joey.sprintChallenge('Advanced CSS'));
+// console.log(`Olivia does a demo:`, olivia.demo('Array Methods'));
+console.log(marg.changeGrade(lola))
