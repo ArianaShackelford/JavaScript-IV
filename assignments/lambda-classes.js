@@ -32,11 +32,11 @@ class Instructor extends Person{
         let newGrade= student.gradeNum(1,100) + score(-20,20);
 
         if (newGrade > student.gradeNum(1,100)){
-            return (`Student did fantastic, Instructor is adding points to class grade!  ${newGrade + student.gradeNum(1,100)} Total Points.`)
+            return (`${student.name}  did fantastic, ${this.name}  is adding points to class grade!  ${newGrade + student.gradeNum(1,100)} Total Points.`)
         }else if (newGrade < student.gradeNum(1, 100)){
-            return (`Work was not satisfactory points being removed from class grade. ${newGrade + student.gradeNum(1,100)} Total Points.`)
+            return (`${student.name}'s work was not satisfactory ${this.name} is removing points from grade. ${newGrade + student.gradeNum(1,100)} Total Points.`)
         } else{
-           return  (`Existing grade is sufficient. ${student.gradeNum(1, 100)} Points`);    
+           return  (`${student.name}'s existing grade is sufficient ${this.name} is not making any changes. ${student.gradeNum(1, 100)} Points`);    
         }
     }
 }
