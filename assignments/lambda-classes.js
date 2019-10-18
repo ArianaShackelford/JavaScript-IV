@@ -36,12 +36,8 @@ class Instructor extends Person{
         }else if (newGrade < student.gradeNum(1, 100)){
             return (`Work was not satisfactory points being removed from class grade. ${newGrade + student.gradeNum(1,100)} Total Points.`)
         } else{
-           return  (`Existing grade is sufficient. ${student.gradeNum(1, 100)} Points`);
-             
+           return  (`Existing grade is sufficient. ${student.gradeNum(1, 100)} Points`);    
         }
-
-        // Math.random(student.gradeNum(1,100))
-        
     }
 }
 
