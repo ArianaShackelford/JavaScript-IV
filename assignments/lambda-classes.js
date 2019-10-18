@@ -167,16 +167,16 @@ const albert = new ProjectManager ({
 
 //Calling
 
-// console.log(`Harold's background:`,harold.previousBackground);
-// console.log(`Marg's catchphrase:`,marg.catchPhrase);
-// console.log(`George is grading Joey: `,george.grade(joey, 'CSS'));
-// console.log(`Lola's list of favorite Subjects:`)
-// lola.listSubjects();
-// console.log(`Albert announces stand up:`,albert.standUp('web25_george'));
-// console.log(`Jen debugs Harold's code:`,jen.debugsCode(harold, 'JavaScript Fundamentals'));
-// console.log(`George's catchphrase:`,george.catchPhrase);
-// console.log(`Olivia's catchphrase:`,olivia.catchPhrase);
-// console.log(`Lola's PR Assignment:`, lola.PRAssignment('Preprocessing-I'));
-// console.log(`Joey's sprint challenge:`, joey.sprintChallenge('Advanced CSS'));
-// console.log(`Olivia does a demo:`, olivia.demo('Array Methods'));
+console.log(`Harold's background:`,harold.previousBackground);
+console.log(`Marg's catchphrase:`,marg.catchPhrase);
+console.log(`George is grading Joey: `,george.grade(joey, 'CSS'));
+console.log(`Lola's list of favorite Subjects:`)
+lola.listSubjects();
+console.log(`Albert announces stand up:`,albert.standUp('web25_george'));
+console.log(`Jen debugs Harold's code:`,jen.debugsCode(harold, 'JavaScript Fundamentals'));
+console.log(`George's catchphrase:`,george.catchPhrase);
+console.log(`Olivia's catchphrase:`,olivia.catchPhrase);
+console.log(`Lola's PR Assignment:`, lola.PRAssignment('Preprocessing-I'));
+console.log(`Joey's sprint challenge:`, joey.sprintChallenge('Advanced CSS'));
+console.log(`Olivia does a demo:`, olivia.demo('Array Methods'));
 console.log(marg.changeGrade(lola))
